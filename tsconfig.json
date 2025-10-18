@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    // --- Entorno de Ejecución (Frontend) ---
+    "target": "ES2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "ESNext",
+    "jsx": "preserve",
+    // --- Sistema de Módulos ---
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    // --- Calidad y Rigor del Código ---
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    // --- Integración con Bundlers (Parcel) ---
+    "noEmit": true,
+    // --- Rutas (Opcional pero recomendado) ---
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "assets/index-copy.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

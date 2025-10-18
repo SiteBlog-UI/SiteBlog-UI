@@ -1,0 +1,49 @@
+fieldset:not(label) {
+    position: relative;
+    width: 100%;
+    border: 0;
+    padding: 1.3rem 0.6rem;
+    margin: auto auto;
+    margin-left: -0.6rem;
+}
+
+legend {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+}
+
+label {
+    margin: 0.2rem;
+    display: inline-block;
+}
+
+input {
+    margin: 0.2rem auto;
+    display: block;
+}
+
+button {
+    margin: 0.2rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: 0;
+    border-radius: 0.5vw;
+    font-weight: bold;
+}
+
+form#register {
+    width: fit-content;
+    margin: auto auto;
+}
+
+form#register #campoDeAcceso label {
+    display: block;
+    width: fit-content;
+    margin: auto auto;
+}
+
+form#register #campoDeAcceso label.label-password {
+    display: inline-block;
+    margin: auto 0.3rem;
+}
