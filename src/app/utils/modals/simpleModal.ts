@@ -2,7 +2,6 @@ import { Anchor } from "@/components/elements/optionalElements/anchor";
 import { Div } from "@/components/elements/optionalElements/div";
 import { Aside } from "@/components/elements/semanticElements/aside";
 import { UsualAttributes } from "@/components/helpers/types/usualTypes";
-// import "../../../../public/css/modal.css";
 
 export class SimpleModal extends Aside {
     private targeter: Anchor;

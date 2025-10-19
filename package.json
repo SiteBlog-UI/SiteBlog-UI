@@ -6,7 +6,7 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel public/index.html public/formAction.html public/probando.html --no-hmr --no-cache",
-    "build": "parcel build public/index.html",
+    "build": "webpack --config webpack.config.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,8 +14,12 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^24.7.0",
+    "copy-webpack-plugin": "^13.0.1",
     "parcel": "^2.16.0",
+    "ts-loader": "^9.5.4",
     "typescript": "^5.9.3",
-    "url": "^0.11.4"
+    "url": "^0.11.4",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1"
   }
 }

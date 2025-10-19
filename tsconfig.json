@@ -21,7 +21,7 @@
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
     // --- Integración con Bundlers (Parcel) ---
-    "noEmit": true,
+    "noEmit": false,
     // --- Rutas (Opcional pero recomendado) ---
     "baseUrl": ".",
     "paths": {
@@ -30,10 +30,7 @@
       ]
     }
   },
-  "include": [
-    "src",
-    "assets/index-copy.ts"
-  ],
+  "include": ["src/**/*"],
   "exclude": [
     "node_modules",
     "dist"
