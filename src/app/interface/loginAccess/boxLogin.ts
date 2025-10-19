@@ -1,7 +1,7 @@
 import { H2 } from "@/components/elements/titlesElements/headings";
 import { InlineContainer } from "@/components/helpers/helper/inlineContainer";
 import { Label } from "@/components/elements/formElements/label";
-import { Link } from "@/components/elements/especials/link";
+import { Link } from "@/components/elements/especialElements/link";
 import { Button } from "@/components/elements/formElements/button";
 import { Form } from "@/components/elements/formElements/form";
 import { Aside } from "@/components/elements/semanticElements/aside";

@@ -1,5 +1,5 @@
 
-import { Link } from "@/components/elements/especials/link";
+import { Link } from "@/components/elements/especialElements/link";
 import { Anchor } from "@/components/elements/optionalElements/anchor";
 import { Div } from "@/components/elements/optionalElements/div";
 import { Section } from "@/components/elements/semanticElements/section";
