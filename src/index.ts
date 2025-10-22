@@ -1,3 +1,4 @@
-import { headers } from "./app/interface";
+import { header } from "./app/interface/header/header";
 
-headers();
+
+header();

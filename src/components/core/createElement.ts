@@ -32,10 +32,4 @@ export class CreateElement<T extends keyof HTMLElementTagNameMap> {
     public getElement(): HTMLElementTagNameMap[T] {
         return this._element;
     }
-
-    /* public building(content: Node, insert: string): CreateElement{
-        const inserter = document.getElementById(insert);
-        inserter?.appendChild(content);
-        return this;
-    } */
 }

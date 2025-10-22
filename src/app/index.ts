@@ -1,4 +1,4 @@
-import { headers } from "./interface";
+import { header } from "./interface/header/header";
 
 
-headers();
+header();

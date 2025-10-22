@@ -102,7 +102,7 @@ export class Input extends CreateElement<"input"> {
         return this;
     }
 
-    public geInput() {
+    public getInput() {
         return this.getElement();
     }
 }
