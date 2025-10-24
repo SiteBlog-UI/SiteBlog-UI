@@ -98,7 +98,7 @@ export function header() {
  * Este código de abajo representa
  * la generacíon de un simple for_
  * mulario de acceso.
-*/
+ */
 
 const encabezado = new H2();
 encabezado.setAttributes({ id: "tituloFormularioLogin" });
@@ -176,3 +176,9 @@ export const renderForm = document.addEventListener("DOMContentLoaded", () => {
     return CreateElement.setElement(verlo.getContainer());
 });
 ```
+
+---
+
+#### Enlace al índice del proyecto
+
+- [Relacíon de clases código fuente base](./docs/index.md)
