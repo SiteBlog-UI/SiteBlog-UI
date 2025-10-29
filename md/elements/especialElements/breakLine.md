@@ -33,5 +33,3 @@ export const insert_br = br_.getElement();
 ### Una manera es posible que no funcíone, la llamada al metodo por no ser un `node del dom`, para eso he inventado los helper `inlineBlock` y `blockContainer` usando uno u otro, un `span` o un `div` que por debajo usan `innerHTML` es posible configurar un template string que renderíza el metodo. Si es útil con `BreakLine` es aplicable al resto.
 
 ---
-
-> ##### Retroceso [Index](../../index.md)

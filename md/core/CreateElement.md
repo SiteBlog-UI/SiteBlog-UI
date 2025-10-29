@@ -45,5 +45,3 @@
 A su alrededor gira todo y la potencía del software reside en ella. Al extenderla requíere de parametro un tag legal html que genera la clase hija por defecto, es decír la clase hija de `CreateElement` síempre es un tag html legal y estandard. Por lo tanto el software código fuente base se compone de una clase por cada tag, o séa capaz de producír el tag html en cuestíon con todos sus atributos posibles y estado y comportamíento.
 
 ---
-
-> ##### Retroceso [Index](../index.md)

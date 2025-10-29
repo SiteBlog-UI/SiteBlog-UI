@@ -179,6 +179,3 @@ export const renderForm = document.addEventListener("DOMContentLoaded", () => {
 
 ---
 
-#### Enlace al índice del proyecto
-
-- [Relacíon de clases del código fuente base](./docs/index.md)

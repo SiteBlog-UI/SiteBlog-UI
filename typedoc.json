@@ -1,0 +1,14 @@
+{
+  "entryPoints": ["./src"],
+  "entryPointStrategy": "expand",
+  "out": "./docs",
+  "theme": "typedoc-github-theme",
+  "tsconfig": "./tsconfig.json",
+  "plugin": ["typedoc-github-theme"],
+  "jsDocCompatibility": {
+        "exampleTag": true,
+        "defaultTag": true,
+        "inheritDocTag": true,
+        "ignoreUnescapedBraces": true
+    }
+}

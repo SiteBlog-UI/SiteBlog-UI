@@ -32,5 +32,3 @@ export class Link extends CreateElement<"link"> {
 ```
 
 ---
-
-> ##### Retroceso [Index](../../index.md)
