@@ -42,21 +42,16 @@ export class CreateElement<T extends keyof HTMLElementTagNameMap> {
     protected _element: HTMLElementTagNameMap[T];
 
     /**
-     * Description placeholder
-     * @date We-12-2025
-     * @author marcos tonfor
-     *
-     * @private
-     * @static
-     * @name inserter - Propiedad que hace de ancla
+     * Propiedad que hace de ancla
      * para renderízar el valor al obtenerse este.
-     * [Ver el metodo estatico setElement]{@link CreateElement#setElement}
-     * @type {(HTMLElement | null)}
+     * [Ver el metodo estatico setElement]{@link CreateElement.setElement}
+     * @author marcos tonfor
+     * @private
      */
     private static inserter: HTMLElement | null;
 
     /**
-     * Creates an instance of {CreateElement}.
+     * Representa siempre un tag legal html, el pasado por parametro.
      * @date We-20-2025
      * @author marcos tonfor
      *

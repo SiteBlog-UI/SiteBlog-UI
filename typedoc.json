@@ -1,16 +1,27 @@
 {
-  "entryPoints": ["./src"],
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": [
+    "./src"
+  ],
   "entryPointStrategy": "expand",
   "out": "./docs",
-  "theme": "typedoc-github-theme",
   "tsconfig": "./tsconfig.json",
-  "plugin": ["typedoc-github-theme", "@zamiell/typedoc-plugin-not-exported"],
-  "jsDocCompatibility": {
-        "exampleTag": true,
-        "defaultTag": true,
-        "inheritDocTag": true,
-        "ignoreUnescapedBraces": true
-    },
-    "excludePrivate": false,
-    "excludePrivateClassFields": false
+  // "theme": "typedoc-github-theme",
+  "theme": "default-modern",
+  "plugin": [
+    //"typedoc-github-theme",
+    "@typhonjs-typedoc/typedoc-theme-dmt",
+    "typedoc-plugin-missing-exports"
+  ],
+  "excludePrivate": false,
+  "excludeProtected": false,
+  "excludePrivateClassFields": false,
+  "visibilityFilters": {
+    "protected": true,
+    "private": true,
+    "inherited": true,
+    "external": true,
+    "@alpha": true,
+    "@beta": true
+  }
 }

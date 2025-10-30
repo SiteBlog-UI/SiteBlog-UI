@@ -21,7 +21,7 @@
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
     // --- Integración con Bundlers (Parcel) ---
-    "noEmit": false,
+    "noEmit": true,
     // --- Rutas (Opcional pero recomendado) ---
     "baseUrl": ".",
     "paths": {
@@ -30,7 +30,7 @@
       ]
     },
     "skipLibCheck": true,
-    "strictNullChecks": false
+    "strictNullChecks": true
   },
   "include": [
     "src/**/*"
