@@ -4,6 +4,13 @@
   "description": "Interfaz de usuario paar el bloc de apuntes. Blog que reune temas en apuntes didácticos.",
   "private": true,
   "source": "src/index.html",
+  "typedocOptions": {
+    "entryPoints": [
+      "./src"
+    ],
+    "out": "./docs",
+    "excludePrivate": false
+  },
   "scripts": {
     "start": "parcel public/index.html public/formAction.html public/probando.html --no-hmr --no-cache",
     "build": "webpack --config webpack.config.mjs",
@@ -15,6 +22,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^24.7.0",
+    "@zamiell/typedoc-plugin-not-exported": "^0.3.0",
     "copy-webpack-plugin": "^13.0.1",
     "parcel": "^2.16.0",
     "ts-loader": "^9.5.4",

@@ -4,7 +4,7 @@
   "out": "./docs",
   "theme": "typedoc-github-theme",
   "tsconfig": "./tsconfig.json",
-  "plugin": ["typedoc-github-theme", "typedoc-plugin-missing-exports"],
+  "plugin": ["typedoc-github-theme", "@zamiell/typedoc-plugin-not-exported"],
   "jsDocCompatibility": {
         "exampleTag": true,
         "defaultTag": true,
