@@ -4,11 +4,13 @@
   "out": "./docs",
   "theme": "typedoc-github-theme",
   "tsconfig": "./tsconfig.json",
-  "plugin": ["typedoc-github-theme"],
+  "plugin": ["typedoc-github-theme", "typedoc-plugin-missing-exports"],
   "jsDocCompatibility": {
         "exampleTag": true,
         "defaultTag": true,
         "inheritDocTag": true,
         "ignoreUnescapedBraces": true
-    }
+    },
+    "excludePrivate": false,
+    "excludePrivateClassFields": false
 }
