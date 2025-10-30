@@ -1,8 +1,6 @@
 /**
- * Description placeholder
- * @date We-07-2025
- * @author marcos tonfor
- * @description Clase base. Sirve para
+ * @marcostonfor
+ * Clase base. Sirve para
  * al ser extendida generar el tag html
  * que se especifique como parametro y
  * en el constructor, en super durante
