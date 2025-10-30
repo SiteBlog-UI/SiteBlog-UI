@@ -11,7 +11,6 @@
  *
  * @export
  * @class CreateElement
- * @typedef {CreateElement}
  * @template {keyof HTMLElementTagNameMap} T
  */
 export class CreateElement<T extends keyof HTMLElementTagNameMap> {

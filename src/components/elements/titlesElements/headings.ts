@@ -5,13 +5,16 @@ import { UsualAttributes } from "@/components/helpers/types/usualTypes";
  * Clase que extíende y replica la base,
  * sirve para generar el encabezado o heading necesarío.
  * Crea tags heading según el nivel de encabezado que
- * especifiques.
- * @author marcos tonfor 
+ * especifiques. Extíende {@link CreateElement}
+ * Al ser una réplica no pasa parámetro si no la 
+ * llave que firma la clase. 
+ * Así CreateElement obtine T cómo valor válido 
+ * en lugar del tag, que recíbe la clase Headings
+ * está mísma.
+ * @author marcos tonfor
  *
  * @class Headings
- * @typedef {Headings}
  * @template {keyof HTMLElementTagNameMap} T
- * @extends {CreateElement<T>}
  */
 class Headings<T extends keyof HTMLElementTagNameMap> extends CreateElement<T> {
     /**
@@ -28,7 +31,7 @@ class Headings<T extends keyof HTMLElementTagNameMap> extends CreateElement<T> {
     /**
      * Creates an instance of {CreateElement}
      * su parametro _level equivale a la pro
-     * piedad level que equivale a algun nivel 
+     * piedad level que equivale a algun nivel
      * de encabezado.
      * @author marcos tonfor
      *

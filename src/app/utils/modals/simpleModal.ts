@@ -4,24 +4,20 @@ import { Aside } from "@/components/elements/semanticElements/aside";
 import { UsualAttributes } from "@/components/helpers/types/usualTypes";
 
 /**
- * Description placeholder
- * @date Th-04-2025
- * @author marcos tonfor
+ * @marcostonfor
  * @description Clase que genera un aside
  * para contener una ventana modal simple
  * usando html, css y la propiedad o
- * atributo target de las hiperreferencias.
+ * atributo target de las hiperreferencias
+ * Está clase extíende {@link Aside}.
  *
  * @export
  * @class SimpleModal
- * @typedef {SimpleModal}
  * @extends {Aside}
  */
 export class SimpleModal extends Aside {
     /**
-     * Description placeholder
-     * @date Th-06-2025
-     * @author marcos tonfor
+     * @marcostonfor
      * @description Propiedad que representa
      * una instancia de la clase Anchor que a
      * su vez representa un ancla html o tag a
@@ -31,14 +27,12 @@ export class SimpleModal extends Aside {
      * llamarla.
      *
      * @private
-     * @name targeter - [href="#idElementoModal"]
+     * @name targeter - Su valor es: [href="#idElementoModal"]
      * @type {Anchor}
      */
     private targeter: Anchor;
     /**
-     * Description placeholder
-     * @date Th-09-2025
-     * @author marcos tonfor
+     * @marcostonfor
      * @description Está propiedad de la clase
      * es el elemento o caja en si, su contenído
      * son los elementos html necesaríos para
@@ -50,10 +44,9 @@ export class SimpleModal extends Aside {
      */
     private box: Div;
     /**
-     * Description placeholder
-     * @date Th-13-2025
-     * @author marcos tonfor
-     * @description 
+     * @marcostonfor
+     * @description Propiedad que contíene 
+     * el cuerpo o contenído de la ventana.
      *
      * @private
      * @name boxContent 
@@ -61,9 +54,9 @@ export class SimpleModal extends Aside {
      */
     private boxContent: Div;    
     /**
-     * Description placeholder
-     * @date Th-13-2025
-     * @author marcos tonfor
+     * @marcostonfor
+     * @description Propiedad que representa 
+     * el botón que cíerra la ventana.
      *
      * @private
      * @name close 
@@ -73,9 +66,8 @@ export class SimpleModal extends Aside {
 
     
     /**
-     * Creates an instance of {CreateElement}.
-     * @date Th-40-2025
-     * @author marcos tonfor
+     * Creates an instance of {Aside}.
+     * @marcostonfor
      * @description Gracias al constructor 
      * se obtienen los elementos html esencíales
      * para montar la ventana modal. Cada 
@@ -100,9 +92,7 @@ export class SimpleModal extends Aside {
 
     
     /**
-     * Description placeholder
-     * @date Th-48-2025
-     * @author marcos tonfor
+     * @marcostonfor
      * @description Metodo que establece 
      * la ventana modal en su jerarquía 
      * de elementos. Monta el modal y 
@@ -156,9 +146,7 @@ export class SimpleModal extends Aside {
 
     
     /**
-     * Description placeholder
-     * @date Th-54-2025
-     * @author marcos tonfor
+     * @marcostonfor
      * @description Devuelve el elemento 
      * aside generado con su contenído.
      *
