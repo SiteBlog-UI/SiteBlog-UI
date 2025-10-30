@@ -16,7 +16,7 @@ export class Anchor extends CreateElement<"a"> {
      * @marcostonfor
      * Constructor vacío, su único parametro 
      * es el que se hereda por extends.
-     * @see {@link CreateElement#constructor}
+     * @see 
      * 
      * @constructor
      */
