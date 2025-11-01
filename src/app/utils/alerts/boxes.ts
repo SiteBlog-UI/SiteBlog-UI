@@ -1,20 +1,25 @@
 
 
 /**
- * Clase que define un alert simple, metodo alert.
- * @author marcos tonfor
+ * @marcostonfor
+ * Clase que define un alert simple,
+ * metodo alert.
+ *
  *
  * @export
- * @class Alert
+ * @class
+ * @name Alert
  */
 export class Alert {    
     /**
-     * @author marcos tonfor
+     * @marcostonfor
      *
      * @constructor
-     * @param {string} message - Parametro que recoge 
+     * @param {string} message
+     * @description Parametro que recoge 
      * el mensaje a especifícar en un simple metodo alert 
      * javascript declarado en el constructor.
+     * @see
      */
     constructor(message: string) {
         alert(message);
@@ -22,21 +27,24 @@ export class Alert {
 }
 
 /**
+ * @marcostonfor
  * Metodo que realiza 
  * la instáncia de la clase Alert.
- * @author marcos tonfor
- *
+ * 
  * @export
- * @function setAlert
+ * @function
+ * @name setAlert
  * @param {string} message 
  * @returns {Alert} 
  */
 export function setAlert(message: string): Alert {    
     /**
-     * @author marcos tonfor
+     * @marcostonfor
      *
-     * @constant alert - Nueva instáncia de Alert.
+     * @constant 
+     * @name alert - Nueva instáncia de Alert.
      * @type {Alert}
+     * @see {@link Alert}
      */
     const alert: Alert = new Alert(message);
     return alert;
@@ -44,20 +52,23 @@ export function setAlert(message: string): Alert {
 
 
 /**
+ * @marcostonfor
  * Clase que representa un simple metodo confirm.
- * @author marcos tonfor
- *
+ * 
  * @export
- * @class Confirm
+ * @class
+ * @name Confirm
  */
 export class Confirm {    
     /**
-     * @author marcos tonfor
+     * @marcostonfor
      *
      * @constructor
-     * @param {string} message - Parametro que recoge 
+     * @param {string} message
+     * @description Parametro que recoge 
      * el mensaje a especifícar en un simple metodo 
      * confirm javascript declarado en el constructor.
+     * @see {@link Confirm}
      */
     constructor(message: string) {
         confirm(message);
@@ -66,13 +77,14 @@ export class Confirm {
 
 
 /**
+ * @marcostonfor
  * Metodo que realiza 
  * la llamada al constructor de la 
  * clase Confirm.
- * @author marcos tonfor
  *
  * @export
- * @function setConfirm
+ * @function 
+ * @name setConfirm
  * @param {string} message 
  * @returns {Confirm} 
  */
@@ -80,8 +92,10 @@ export function setConfirm(message: string): Confirm {
     /**
      * @author marcos tonfor
      *
-     * @constant confirm - Nueva instáncia de Confirm.
+     * @constant
+     * @name confirm - Nueva instáncia de Confirm.
      * @type {Confirm}
+     * @see {@link Confirm}
      */
     const confirm: Confirm = new Confirm(message);
     return confirm;

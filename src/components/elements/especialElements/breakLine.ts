@@ -2,10 +2,8 @@ import { CreateElement } from "@/components/core/createElement";
 
 
 /**
- * Description placeholder
- * @date We-33-2025
- * @author marcos tonfor
- * @description Es simplemente 
+ * @marcostonfor
+ * Es simplemente 
  * una clase que representa un 
  * salto de línea. No contenído
  * no atributos, clase vacía.
@@ -16,6 +14,14 @@ import { CreateElement } from "@/components/core/createElement";
  * @extends {CreateElement<"br">}
  */
 export class BreakLine extends CreateElement<"br"> {
+    /**
+     * @marcostonfor
+     * Crea una instáncia de {@link CreateElement}
+     * generando un salto de linea, ['&lt;br&gt;']
+     * 
+     * @constructor
+     * @see
+     */
     constructor() {
         super("br");
     }
@@ -23,13 +29,14 @@ export class BreakLine extends CreateElement<"br"> {
 
 
 /**
- * Description placeholder
- * @date We-36-2025
- * @author marcos tonfor
- * @description Funcíon usada para poder repetír los saltos de línea.
+ * @marcostonfor
+ * Funcíon usada para poder 
+ * repetír los saltos de línea.
  *
  * @export
- * @returns {Node} 
+ * @function
+ * @name breakLine
+ * @returns {Node} - Devuelve literal un tag ['&lt;br&gt;'] 
  */
 export function breakLine(): Node {
     const br = new BreakLine();
@@ -38,25 +45,23 @@ export function breakLine(): Node {
 
 
 /**
- * Description placeholder
- * @date We-42-2025
- * @author marcos tonfor
+ * @marcostonfor
+ * Es un salto de línea,
+ * instáncia de la clase {@link BreakLine}
  *
  * @constant
- * @name br_ - Es un salto de línea
+ * @name br_
  * @type {BreakLine}
  */
-const br_ = new BreakLine();
-
+const br_: BreakLine = new BreakLine();
 
 /**
- * Description placeholder
- * @date We-43-2025
- * @author marcos tonfor
+ * @marcostonfor
+ * 
  *
  * @export 
  * @constant
- * @name insert_br - Constante que guarda el salto de linea @name {br_}
+ * @name insert_br - Constante que guarda el salto de linea de la constante {@link br_}
  * @type {*}
  */
-export const insert_br = br_.getElement();
+export const insert_br: any = br_.getElement();

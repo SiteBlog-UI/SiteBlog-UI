@@ -1,7 +1,18 @@
+/** 
+ * @marcostonfor
+ * @categoryDescription Generador de 
+ * encabezados html. Modulo del que 
+ * se obtíenen los 6 niveles de 
+ * encabezado que exísten en html.
+ * @showCategories
+ * @module
+ */
+
 import { CreateElement } from "@/components/core/createElement";
 import { UsualAttributes } from "@/components/helpers/types/usualTypes";
 
 /**
+ * @marcostonfor
  * Clase que extíende y replica la base,
  * sirve para generar el encabezado o heading necesarío.
  * Crea tags heading según el nivel de encabezado que
@@ -11,20 +22,20 @@ import { UsualAttributes } from "@/components/helpers/types/usualTypes";
  * Así CreateElement obtine T cómo valor válido 
  * en lugar del tag, que recíbe la clase Headings
  * está mísma.
- * @author marcos tonfor
  *
  * @class Headings
  * @template {keyof HTMLElementTagNameMap} T
+ * @extends {CreateElement<T>}
  */
 class Headings<T extends keyof HTMLElementTagNameMap> extends CreateElement<T> {
     /**
+     * @marcostonfor
      * Propiedad que determina
-     * el encabezado que se va a generar.
-     * @author marcos tonfor
+     * el encabezado que se va a generar. 
      *
      * @protected
+     * @type {T} 
      * @name level
-     * @type {T}
      */
     protected level: T;
 
@@ -33,10 +44,10 @@ class Headings<T extends keyof HTMLElementTagNameMap> extends CreateElement<T> {
      * su parametro _level equivale a la pro
      * piedad level que equivale a algun nivel
      * de encabezado.
-     * @author marcos tonfor
      *
      * @constructor
      * @param {T} _level - Equivale a level.
+     * @see
      */
     constructor(_level: T) {
         super(_level);
@@ -44,15 +55,16 @@ class Headings<T extends keyof HTMLElementTagNameMap> extends CreateElement<T> {
     }
 
     /**
-     * Description placeholder
-     * @date Th-42-2025
-     * @author marcos tonfor
+     * @marcostonfor
+     * Establece atributos
+     * a los encabezados que genera.
      *
      * @public
-     * @method setAttributes - Establece atributos
-     * a los encabezados que genera.
+     * @method setAttributes
      * @param {UsualAttributes} attr
      * @returns {*}
+     * @see - Visítar {@link UsualAttributes} -
+     * @see - Ver {@link CreateElement.setAttributesTag}
      */
     public setAttributes(attr: UsualAttributes): any {
         if (attr) {
@@ -69,12 +81,17 @@ class Headings<T extends keyof HTMLElementTagNameMap> extends CreateElement<T> {
     }
 
     /**
-     * Description placeholder
-     * @date Th-44-2025
-     * @author marcos tonfor
+     * @marcostonfor
+     * Incluye contenidos en el encabezado.
+     * @summary
+     * El parámetro - content - representa
+     * bíen html, bíen strings. No sírve 
+     * cualquíer string ya que debe ser 
+     * texto o html.
+     * @see - Ver {@link CreateElement.appendContent}
      *
      * @public
-     * @method setContent - Incluye contenidos en el encabezado.
+     * @method setContent
      * @param {(string | Node)} content
      * @returns {*}
      */
@@ -83,13 +100,13 @@ class Headings<T extends keyof HTMLElementTagNameMap> extends CreateElement<T> {
     }
 
     /**
-     * Description placeholder
-     * @date Th-46-2025
-     * @author marcos tonfor
+     * @marcostonfor
+     * Devuelve un elemento de tipo encabezado.
      *
      * @public
-     * @method getHeading - Devuelve un elemento de tipo encabezado.
+     * @method getHeading
      * @returns {Node}
+     * @see - Ver {@link CreateElement.getElement}
      */
     public getHeading(): Node {
         return this.getElement();
@@ -97,26 +114,19 @@ class Headings<T extends keyof HTMLElementTagNameMap> extends CreateElement<T> {
 }
 
 /**
- * Description placeholder
- * @date Th-47-2025
- * @author marcos tonfor
- * @description Clase encabezado,
- * vacía con solo el constructor
- * y su parametro heredado. Aquí
- * h1.
+ * @marcostonfor
+ * @category h1
  *
  * @export
  * @class H1
- * @typedef {H1}
  * @extends {Headings<"h1">}
  */
 export class H1 extends Headings<"h1"> {
     /**
-     * Creates an instance of {Headings}.
-     * @date Th-48-2025
-     * @author marcos tonfor
-     *
+     * Instáncia de {@link Headings}
+     * 
      * @constructor
+     * @see
      */
     constructor() {
         super("h1");
@@ -124,26 +134,19 @@ export class H1 extends Headings<"h1"> {
 }
 
 /**
- * Description placeholder
- * @date Th-55-2025
- * @author marcos tonfor
- * @description Clase encabezado,
- * vacía con solo el constructor
- * y su parametro heredado. Aquí
- * h2.
+ * @marcostonfor
+ * @category h2
  *
  * @export
  * @class H2
- * @typedef {H2}
  * @extends {Headings<"h2">}
  */
 export class H2 extends Headings<"h2"> {
     /**
-     * Creates an instance of {Headings}.
-     * @date Th-57-2025
-     * @author marcos tonfor
+     * Instáncia de {@link Headings}
      *
      * @constructor
+     * @see
      */
     constructor() {
         super("h2");
@@ -151,26 +154,19 @@ export class H2 extends Headings<"h2"> {
 }
 
 /**
- * Description placeholder
- * @date Th-58-2025
- * @author marcos tonfor
- * @description Clase encabezado,
- * vacía con solo el constructor
- * y su parametro heredado. Aquí
- * h3.
+ * @marcostonfor
+ * @category h3
  *
  * @export
  * @class H3
- * @typedef {H3}
  * @extends {Headings<"h3">}
  */
 export class H3 extends Headings<"h3"> {
     /**
-     * Creates an instance of {Headings}.
-     * @date Th-59-2025
-     * @author marcos tonfor
+     * Instáncia de {@link Headings} 
      *
      * @constructor
+     * @see
      */
     constructor() {
         super("h3");
@@ -178,26 +174,19 @@ export class H3 extends Headings<"h3"> {
 }
 
 /**
- * Description placeholder
- * @date Th-00-2025
- * @author marcos tonfor
- * @description Clase encabezado,
- * vacía con solo el constructor
- * y su parametro heredado. Aquí
- * h4.
+ * @marcostonfor
+ * @category h4
  *
  * @export
  * @class H4
- * @typedef {H4}
  * @extends {Headings<"h4">}
  */
 export class H4 extends Headings<"h4"> {
     /**
-     * Creates an instance of {Headings}.
-     * @date Th-00-2025
-     * @author marcos tonfor
+     * Instáncia de {@link Headings}
      *
      * @constructor
+     * @see
      */
     constructor() {
         super("h4");
@@ -205,24 +194,16 @@ export class H4 extends Headings<"h4"> {
 }
 
 /**
- * Description placeholder
- * @date Th-01-2025
- * @author marcos tonfor
- * @description Clase encabezado,
- * vacía con solo el constructor
- * y su parametro heredado. Aquí
- * h5.
+ * @marcostonfor
+ * @category h5
  *
  * @export
  * @class H5
- * @typedef {H5}
  * @extends {Headings<"h5">}
  */
 export class H5 extends Headings<"h5"> {
     /**
-     * Creates an instance of {Headings}.
-     * @date Th-01-2025
-     * @author marcos tonfor
+     * Instáncia de {@link Headings}
      *
      * @constructor
      */
@@ -232,26 +213,19 @@ export class H5 extends Headings<"h5"> {
 }
 
 /**
- * Description placeholder
- * @date Th-01-2025
- * @author marcos tonfor
- * @description Clase encabezado,
- * vacía con solo el constructor
- * y su parametro heredado. Aquí
- * h6.
+ * @marcostonfor
+ * @category h6
  *
  * @export
  * @class H6
- * @typedef {H6}
  * @extends {Headings<"h6">}
  */
 export class H6 extends Headings<"h6"> {
     /**
-     * Creates an instance of {Headings}.
-     * @date Th-02-2025
-     * @author marcos tonfor
+     * Instáncia de {@link Headings}
      *
      * @constructor
+     * @see
      */
     constructor() {
         super("h6");

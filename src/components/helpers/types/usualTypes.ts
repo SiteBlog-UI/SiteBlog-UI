@@ -4,6 +4,15 @@ export type UsualAttributes = {
     title?: string;
 };
 
+/**
+ * @marcostonfor
+ * Tipo para representar 
+ * la forma que adopta el 
+ * input, su tipo.
+ * 
+ * @export
+ * @name InputTypes
+ */
 export type InputTypes = {
     button?: string;
     checkbox?: string;

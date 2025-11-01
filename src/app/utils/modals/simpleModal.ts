@@ -1,7 +1,7 @@
+import { UsualAttributes } from './../../../components/helpers/types/usualTypes';
 import { Anchor } from "@/components/elements/optionalElements/anchor";
 import { Div } from "@/components/elements/optionalElements/div";
 import { Aside } from "@/components/elements/semanticElements/aside";
-import { UsualAttributes } from "@/components/helpers/types/usualTypes";
 
 /**
  * @marcostonfor
@@ -80,6 +80,7 @@ export class SimpleModal extends Aside {
      * @constructor
      * @param {string} meta - Valor de targeter, 
      * id del modal y contenido de href: '#identidad'.
+     * @see
      */
     constructor(meta: string) {
         super();
@@ -106,6 +107,7 @@ export class SimpleModal extends Aside {
      * @param {?{ content: string; id: string }} [enTarget] 
      * @param {?UsualAttributes} [boxAttr] 
      * @param {?UsualAttributes} [boxContAttr] 
+     * @see [type - Atributos más comúnes de los tag html]{@link UsualAttributes}
      */
     public setModal(
         modalContent: string | Node,

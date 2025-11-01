@@ -43,6 +43,7 @@ Explicańdolo:
      se úsan llamando al metodo\
      que crea el contenído.
 3. Ejemplos:
+  - ## Creando más clases o clases própias
 
 ```typescript
 // Ejemplo con la creacíon de
@@ -74,6 +75,7 @@ export class FirstSection extends Section {
     // header.
 }
 ```
+  - ## Obtencíon del header
 
 ```typescript
 // Creacíon e insercíon del header
@@ -88,6 +90,7 @@ export function header() {
     });
 }
 ```
+  - ## Simples instáncias del codigo fuente
 
 ```typescript
 // Sin crear clases, es decír;
@@ -179,3 +182,12 @@ export const renderForm = document.addEventListener("DOMContentLoaded", () => {
 
 ---
 
+## [demo con el codigo del formulario](https://siteblog-ui.infinityfree.me/?i=1)
+
+---
+
+> ## Sobre el demo
+
+Es muy simple y escueto, hasta ahora me he limitado a lo mínimo en desarrollo para poder configurar y diseñar el proyecto al máximo.  
+En este demo hay un link llamado `LOGIN` funcíona y despliega una ventana modal, así mísmo generada con el software, dentro por contenído está el formularío simple de acceso. El botón submit inicía una accíon pues he definído un action simple una vez más, y abre una nueva página html.  
+Cúando híce este demo no había desarrollado listas ni su posibilidad aun.

@@ -12,17 +12,16 @@
  * @export
  * @class CreateElement
  * @template {keyof HTMLElementTagNameMap} T
+ * {@label CLASE-BASE}
  */
 export class CreateElement<T extends keyof HTMLElementTagNameMap> {
     /**
-     * Description placeholder
-     * @date We-08-2025
-     * @author marcos tonfor
+     * @marcostonfor
      *
      * @protected
      * @name _tag - Propiedad que recoge el valor
      * a obtener de la clase al ser extendida.
-     * @type {T}
+     * @typeParam T
      */
     protected _tag: T;
 
@@ -34,26 +33,30 @@ export class CreateElement<T extends keyof HTMLElementTagNameMap> {
      * @protected
      * @name _element - Propiedad que representa
      * el valor obtenido al extender la clase.
-     * @type {HTMLElementTagNameMap[T]}
+     * @typeParam {HTMLElementTagNameMap[T]}
      */
     protected _element: HTMLElementTagNameMap[T];
 
     /**
+     * @marcostonfor
      * Propiedad que hace de ancla
      * para renderízar el valor al obtenerse este.
      * [Ver el metodo estatico setElement]{@link CreateElement.setElement}
-     * @author marcos tonfor
+     *
      * @private
+     * @static
+     * @name inserter
+     * @typeParam {HTMLElement | null}
      */
     private static inserter: HTMLElement | null;
 
     /**
-     * Representa siempre un tag legal html, el pasado por parametro.
-     * @date We-20-2025
-     * @author marcos tonfor
-     *
+     * Representa siempre un tag legal html, 
+     * el pasado por parametro.
+     * 
      * @constructor
      * @param {T} tag
+     * @see
      */
     constructor(tag: T) {
         this._tag = tag;
@@ -61,13 +64,13 @@ export class CreateElement<T extends keyof HTMLElementTagNameMap> {
     }
 
     /**
-     * Description placeholder
-     * @date We-21-2025
-     * @author marcos tonfor
+     * @marcostonfor
+     * Metodo que establece
+     * los atributos en el tag resultante.
      *
      * @public
-     * @name setAttributesTag - Metodo que establece
-     * los atributos en el tag resultante.
+     * @method
+     * @name setAttributesTag 
      * @param {string} attr
      * @param {string} attrValue
      * @returns {this}
@@ -78,14 +81,14 @@ export class CreateElement<T extends keyof HTMLElementTagNameMap> {
     }
 
     /**
-     * Description placeholder
-     * @date We-22-2025
-     * @author marcos tonfor
-     *
-     * @public
-     * @name appendContent - Metodo especíal para insertar contenído
+     * @marcostonfor
+     * Metodo especíal para insertar contenído
      * en el tag obtenído con extends. Si es un String lo inserta y
      * si no inserta como elemento html.
+     *
+     * @public
+     * @method
+     * @name appendContent 
      * @param {(string | Node)} content
      * @returns {Node}
      */
@@ -99,21 +102,20 @@ export class CreateElement<T extends keyof HTMLElementTagNameMap> {
     }
 
     /**
-     * Description placeholder
-     * @date We-23-2025
-     * @author marcos tonfor
-     * @description Metodo estático cuya funcíon
+     * @marcostonfor
+     * Metodo estático cuya funcíon
      * es la de insertar contenído generado ext_
      * endíendo está clase e instancíando sus resultados.
      *
      * @public
      * @static
+     * @method
      * @name setElement
      * @param {Node} content - Tag legal html con o sin contenído en su interíor.
      * @param {?string} [insert] - Es el elemento dónde se colocará el valor de {@name content}
      * @returns {typeof CreateElement}
      */
-    public static setElement(content: Node, insert?: string) {
+    public static setElement(content: Node, insert?: string): typeof CreateElement {
         if (insert) {
             this.inserter = document.getElementById(insert);
             this.inserter?.appendChild(content);
@@ -122,18 +124,18 @@ export class CreateElement<T extends keyof HTMLElementTagNameMap> {
     }
 
     /**
-     * Description placeholder
-     * @date We-31-2025
-     * @author marcos tonfor
-     * @description Sin este metodo sería imposible
+     * @marcostonfor
+     * Sin este metodo sería imposible
      * insertar el contenído. Devuelve el elemento
      * solicitado si coincíde con el esperado. Si
      * Tag == Tag, entonces devuelve el tag esperado
      * si no falla.
      *
      * @public
+     * @method
      * @name getElement
-     * @returns {HTMLElementTagNameMap[T]} - [this._element]{@link CreateElement#_element}
+     * @returns {HTMLElementTagNameMap[T]}
+     * @see [this._element]{@link CreateElement#_element}
      */
     public getElement(): HTMLElementTagNameMap[T] {
         return this._element;
