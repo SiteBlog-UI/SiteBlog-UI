@@ -1,3 +1,5 @@
+import { Globals } from '@/components/helpers/types/globalTypes';
+
 /**
  * @marcostonfor
  * Clase base. Sirve para
@@ -51,9 +53,9 @@ export class CreateElement<T extends keyof HTMLElementTagNameMap> {
     private static inserter: HTMLElement | null;
 
     /**
-     * Representa siempre un tag legal html, 
+     * Representa siempre un tag legal html,
      * el pasado por parametro.
-     * 
+     *
      * @constructor
      * @param {T} tag
      * @see
@@ -67,10 +69,11 @@ export class CreateElement<T extends keyof HTMLElementTagNameMap> {
      * @marcostonfor
      * Metodo que establece
      * los atributos en el tag resultante.
+     * {@label HELPER}
      *
      * @public
      * @method
-     * @name setAttributesTag 
+     * @name setAttributesTag
      * @param {string} attr
      * @param {string} attrValue
      * @returns {this}
@@ -82,13 +85,97 @@ export class CreateElement<T extends keyof HTMLElementTagNameMap> {
 
     /**
      * @marcostonfor
+     * Metodo que inserta los atributos
+     * globales de los tag html.
+     * 
+     * @public
+     * @method setUsualAttributes
+     * @param {Globals} global - Atributo global de cualquíer tag html.
+     * @see {@link Globals}
+     */
+    public setUsualAttributes(global: Globals) {
+        if (global) {
+            if (global.accesskey) {
+                this._element.setAttribute("accesskey", global.accesskey);
+            }
+            if (global.class) {
+                this._element.setAttribute("class", global.class);
+            }
+            if (global.contenteditable) {
+                this._element.setAttribute(
+                    "contenteditable",
+                    global.contenteditable,
+                );
+            }
+            if (global.data) {
+                this._element.setAttribute("data", global.data);
+            }
+            if (global.dir) {
+                this._element.setAttribute("dir", global.dir);
+            }
+            if (global.draggable) {
+                this._element.setAttribute("draggable", global.draggable);
+            }
+            if (global.enterkeyhint) {
+                this._element.setAttribute("enterkeyhint", global.enterkeyhint);
+            }
+            if (global.hidden) {
+                if (global.hidden == true) {
+                    this._element.setAttribute("hidden", "");
+                } else {
+                    this._element.setAttribute("", "");
+                }
+            }
+            if (global.id) {
+                this._element.setAttribute("id", global.id);
+            }
+            if (global.inert) {
+                if (global.inert == true) {
+                    this._element.setAttribute("inert", "");
+                } else {
+                    this._element.setAttribute("", "");
+                }
+            }
+            if (global.inputmode) {
+                this._element.setAttribute("inputmode", global.inputmode);
+            }
+            if (global.lang) {
+                this._element.setAttribute("lang", global.lang);
+            }
+            if (global.popover) {
+                if (global.popover == true) {
+                    this._element.setAttribute("popover", "");
+                } else {
+                    this._element.setAttribute("", "");
+                }
+            }
+            if (global.spellcheck) {
+                this._element.setAttribute("spellcheck", global.spellcheck);
+            }
+            if (global.style) {
+                this._element.setAttribute("style", global.style);
+            }
+            if (global.tabindex) {
+                this._element.setAttribute("tabindex", global.tabindex);
+            }
+            if (global.title) {
+                this._element.setAttribute("title", global.title);
+            }
+            if (global.translate) {
+                this._element.setAttribute("translate", global.translate);
+            }
+        }
+    }
+
+    /**
+     * @marcostonfor
      * Metodo especíal para insertar contenído
      * en el tag obtenído con extends. Si es un String lo inserta y
      * si no inserta como elemento html.
      *
      * @public
      * @method
-     * @name appendContent 
+     * @name appendContent
      * @param {(string | Node)} content
      * @returns {Node}
      */
@@ -115,7 +202,10 @@ export class CreateElement<T extends keyof HTMLElementTagNameMap> {
      * @param {?string} [insert] - Es el elemento dónde se colocará el valor de {@name content}
      * @returns {typeof CreateElement}
      */
-    public static setElement(content: Node, insert?: string): typeof CreateElement {
+    public static setElement(
+        content: Node,
+        insert?: string,
+    ): typeof CreateElement {
         if (insert) {
             this.inserter = document.getElementById(insert);
             this.inserter?.appendChild(content);

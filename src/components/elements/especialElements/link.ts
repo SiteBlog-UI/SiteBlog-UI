@@ -12,7 +12,6 @@ import { TypesLink } from "../../helpers/types/linkTypes";
  *
  * @export
  * @class Link
- * @typedef {Link}
  * @extends {CreateElement<"link">}
  */
 export class Link extends CreateElement<"link"> {
@@ -85,15 +84,16 @@ export class Link extends CreateElement<"link"> {
 
     
     /**
-     * Description placeholder
-     * @date Th-14-2025
-     * @author marcos tonfor
+     * @marcostonfor
+     * Getter, metodo que obtíene el tag
+     * resultante con o sin contenído.
      *
      * @public
-     * @name getLink
-     * @returns {*} 
+     * @method getLink
+     * @returns {Node}
+     * @see - Ver {@link CreateElement.getElement} 
      */
-    public getLink(){
+    public getLink(): Node {
         return this.getElement();
     }
 }

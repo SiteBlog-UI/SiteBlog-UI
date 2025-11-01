@@ -1,12 +1,12 @@
 import { CreateElement } from "@/components/core/createElement";
-import { UsualAttributes } from "@/components/helpers/types/usualTypes";
+import { Globals } from "@/components/helpers/types/globalTypes";
 
 export class Aside extends CreateElement<"aside"> {
     constructor() {
         super("aside");
     }
 
-    public setAside(attr?: UsualAttributes) {
+    public setAside(attr?: Globals) {
         if (attr) {
             if (attr.id) {
                 this.setAttributesTag("id", attr.id);

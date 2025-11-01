@@ -1,5 +1,5 @@
 import { CreateElement } from "@/components/core/createElement";
-import { UsualAttributes } from "@/components/helpers/types/usualTypes";
+import { Globals } from "@/components/helpers/types/globalTypes";
 
 export class Header extends CreateElement<"header"> {
     constructor() {
@@ -10,7 +10,7 @@ export class Header extends CreateElement<"header"> {
         return this.getElement();
     }
 
-    public setHeader(attr?: UsualAttributes) {
+    public setHeader(attr?: Globals) {
         if (attr) {
             if (attr.id) {
                 this.setAttributesTag("id", attr.id);

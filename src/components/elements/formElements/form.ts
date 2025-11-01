@@ -1,5 +1,5 @@
-import { AttrForm } from "@/components/helpers/types/attrForm";
 import { CreateElement } from "../../core/createElement";
+import { Globals } from "@/components/helpers/types/globalTypes";
 
 export class Form extends CreateElement<"form"> {
     constructor() {
@@ -26,18 +26,13 @@ export class Form extends CreateElement<"form"> {
         }
     }
 
-    public setForm(attr: AttrForm){
-        if(attr){            
-            if(attr.name && attr.title){
-                this.setAttributesTag("name", attr.name);
-                this.setAttributesTag("title", attr.title);
-            }
-            if(attr.id){
-                this.setAttributesTag("id", attr.id);
-            }
-            if(attr.class){
-                this.setAttributesTag("class", attr.class);
-            }
+    public setForm(attr: Globals){
+        if(attr){
+            this.setUsualAttributes(attr);
         }
+    }
+
+    public getForm(){
+        return this.getElement();
     }
 }

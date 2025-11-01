@@ -1,5 +1,5 @@
 import { CreateElement } from "@/components/core/createElement";
-import { InputTypes } from "@/components/helpers/types/usualTypes";
+import { InputTypes } from "@/components/helpers/types/inputTypes";
 
 export class Input extends CreateElement<"input"> {
     constructor() {

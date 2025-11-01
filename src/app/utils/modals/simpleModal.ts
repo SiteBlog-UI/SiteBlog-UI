@@ -1,7 +1,8 @@
-import { UsualAttributes } from './../../../components/helpers/types/usualTypes';
+
 import { Anchor } from "@/components/elements/optionalElements/anchor";
 import { Div } from "@/components/elements/optionalElements/div";
 import { Aside } from "@/components/elements/semanticElements/aside";
+import { Globals } from "@/components/helpers/types/globalTypes";
 
 /**
  * @marcostonfor
@@ -103,18 +104,18 @@ export class SimpleModal extends Aside {
      * @public
      * @method setModal
      * @param {(string | Node)} modalContent 
-     * @param {?UsualAttributes} [asideAttr] 
+     * @param {?Globals} [asideAttr] 
      * @param {?{ content: string; id: string }} [enTarget] 
-     * @param {?UsualAttributes} [boxAttr] 
-     * @param {?UsualAttributes} [boxContAttr] 
-     * @see [type - Atributos más comúnes de los tag html]{@link UsualAttributes}
+     * @param {?Globals} [boxAttr] 
+     * @param {?Globals} [boxContAttr] 
+     * @see [type - Atributos más comúnes de los tag html]{@link Globals}
      */
     public setModal(
         modalContent: string | Node,
-        asideAttr?: UsualAttributes,
+        asideAttr?: Globals,
         enTarget?: { content: string; id: string },
-        boxAttr?: UsualAttributes,
-        boxContAttr?: UsualAttributes,
+        boxAttr?: Globals,
+        boxContAttr?: Globals,
     ) {
         if (asideAttr) {
             this.setAside(asideAttr);

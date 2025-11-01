@@ -1,29 +1,62 @@
+/** 
+ * @marcostonfor
+ * @categoryDescription Modulo encargado de obtener listas,
+ * listas desordenadas, listas ordenadas, además obtíene menus
+ * con sus links.
+ * 
+ * @showCategorys
+ * @module
+ */
+
 import { CreateElement } from "@/components/core/createElement";
-import { UsualAttributes } from "@/components/helpers/types/usualTypes";
 import { Div } from "./div";
 import { Anchor } from "./anchor";
+import { Globals } from "@/components/helpers/types/globalTypes";
 
+/**
+ * @marcostonfor
+ * @category Clase que genera un tag [`<li></li>`]
+ * 
+ * @class Li
+ * @extends {CreateElement<"li">}
+ * @see - Extíende {@link CreateElement}
+ */
 export class Li extends CreateElement<"li"> {
+    /**
+     * @marcostonfor
+     * Constructor vacío, su único parametro
+     * es el que se hereda por extends.
+     * @see
+     *
+     * @constructor
+     */
     constructor() {
         super("li");
     }
 
+    /**
+     * @marcostonfor
+     * Este metodo es usado para generar 
+     * la estructura base de un tag [`<li></li>`]
+     * @see {@link CreateElement.setElement} - Es la forma
+     * natural de la clase para insertarse en su destino.
+     * 
+     * 
+     * @public
+     * @method createLi
+     * @param {string | Node} content 
+     * @param {string} insert 
+     * @param {Globals} liAttr 
+     * @see - Ver {@link Globals}
+     */
     public createLi(
         content: string | Node,
         insert: string,
-        liAttr?: UsualAttributes,
+        liAttr?: Globals,
     ) {
         const li = new Li();
         if (liAttr) {
-            if (liAttr.id) {
-                li.setAttributesTag("id", liAttr.id);
-            }
-            if (liAttr.class) {
-                li.setAttributesTag("class", liAttr.class);
-            }
-            if (liAttr.title) {
-                li.setAttributesTag("title", liAttr.title);
-            }
+            li.setUsualAttributes(liAttr);
         }
         li.appendContent(content);
         document.addEventListener("DOMContentLoaded", () => {
@@ -35,9 +68,9 @@ export class Li extends CreateElement<"li"> {
         content: string,
         insert: string,
         targeter: string,
-        aAttr?: UsualAttributes,
+        aAttr?: Globals,
         target?: string,
-        liAttr?: UsualAttributes,
+        liAttr?: Globals,
     ) {
         const li = new Li();
         const a = new Anchor();
@@ -47,26 +80,10 @@ export class Li extends CreateElement<"li"> {
             a.setHiperReference(targeter);
         }
         if (aAttr) {
-            if (aAttr.id) {
-                a.setAttributesTag("id", aAttr.id);
-            }
-            if (aAttr.class) {
-                a.setAttributesTag("class", aAttr.class);
-            }
-            if (aAttr.title) {
-                a.setAttributesTag("title", aAttr.title);
-            }
+            a.setUsualAttributes(aAttr);
         }
         if (liAttr) {
-            if (liAttr.id) {
-                li.setAttributesTag("id", liAttr.id);
-            }
-            if (liAttr.class) {
-                li.setAttributesTag("class", liAttr.class);
-            }
-            if (liAttr.title) {
-                li.setAttributesTag("title", liAttr.title);
-            }
+            li.setUsualAttributes(liAttr);
         }
         a.appendContent(content);
         li.appendContent(a.getElement());
@@ -97,7 +114,7 @@ export class Menus {
     public createMenu(
         inserter: string,
         content: Node,
-        attr?: UsualAttributes,
+        attr?: Globals,
         attrUl?: { id?: string; class?: string },
     ) {
         const listaUl = new UL();

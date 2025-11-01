@@ -1,12 +1,12 @@
 import { CreateElement } from "@/components/core/createElement";
-import { UsualAttributes } from "@/components/helpers/types/usualTypes";
+import { Globals } from "@/components/helpers/types/globalTypes";
 
 export class Img extends CreateElement<"img"> {
     constructor(){
         super("img");
     }
 
-    public setImg(src: string, alt: string, attr: UsualAttributes){
+    public setImg(src: string, alt: string, attr: Globals){
         if(src){
             this.setAttributesTag("src", src);
         }

@@ -1,23 +1,30 @@
-import { CreateElement } from "@/components/core/createElement";
+/**
+ * @categoryDescription Modulo que representa 
+ * la clase para generar un tag br de salto de 
+ * linea. Clase más instáncias.
+ * @marcostonfor
+ * @showCategorys
+ * @module
+ */
 
+import { CreateElement } from "@/components/core/createElement";
 
 /**
  * @marcostonfor
- * Es simplemente 
+ * @category Es simplemente 
  * una clase que representa un 
  * salto de línea. No contenído
  * no atributos, clase vacía.
  *
  * @export
  * @class BreakLine
- * @typedef {BreakLine}
  * @extends {CreateElement<"br">}
  */
 export class BreakLine extends CreateElement<"br"> {
     /**
      * @marcostonfor
      * Crea una instáncia de {@link CreateElement}
-     * generando un salto de linea, ['&lt;br&gt;']
+     * generando un salto de linea, [`<br>`]
      * 
      * @constructor
      * @see
@@ -30,13 +37,12 @@ export class BreakLine extends CreateElement<"br"> {
 
 /**
  * @marcostonfor
- * Funcíon usada para poder 
+ * @category Funcíon usada para poder 
  * repetír los saltos de línea.
  *
  * @export
- * @function
- * @name breakLine
- * @returns {Node} - Devuelve literal un tag ['&lt;br&gt;'] 
+ * @function breakLine
+ * @returns {Node} - Devuelve literal un tag [`<br>`] 
  */
 export function breakLine(): Node {
     const br = new BreakLine();
@@ -46,22 +52,25 @@ export function breakLine(): Node {
 
 /**
  * @marcostonfor
- * Es un salto de línea,
- * instáncia de la clase {@link BreakLine}
+ * @category Es un salto de línea,
+ * instáncia de la clase [BreakLine]
+ * @see {@link BreakLine}
  *
  * @constant
  * @name br_
  * @type {BreakLine}
  */
-const br_: BreakLine = new BreakLine();
+export const br_: BreakLine = new BreakLine();
 
 /**
  * @marcostonfor
- * 
+ * @category Constante que guarda 
+ * el salto de linea de la constante [br_]
+ * @see {@link br_}
  *
  * @export 
  * @constant
- * @name insert_br - Constante que guarda el salto de linea de la constante {@link br_}
+ * @name insert_br
  * @type {*}
  */
 export const insert_br: any = br_.getElement();

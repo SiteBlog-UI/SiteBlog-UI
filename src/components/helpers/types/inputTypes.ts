@@ -1,9 +1,3 @@
-export type UsualAttributes = {
-    id?: string;
-    class?: string;
-    title?: string;
-};
-
 /**
  * @marcostonfor
  * Tipo para representar 

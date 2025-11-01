@@ -9,7 +9,7 @@
  */
 
 import { CreateElement } from "@/components/core/createElement";
-import { UsualAttributes } from "@/components/helpers/types/usualTypes";
+import { Globals } from "@/components/helpers/types/globalTypes";
 
 /**
  * @marcostonfor
@@ -61,12 +61,12 @@ class Headings<T extends keyof HTMLElementTagNameMap> extends CreateElement<T> {
      *
      * @public
      * @method setAttributes
-     * @param {UsualAttributes} attr
+     * @param {Globals} attr
      * @returns {*}
-     * @see - Visítar {@link UsualAttributes} -
+     * @see - Visítar {@link Globals}
      * @see - Ver {@link CreateElement.setAttributesTag}
      */
-    public setAttributes(attr: UsualAttributes): any {
+    public setAttributes(attr: Globals): any {
         if (attr) {
             if (attr.id) {
                 return this.setAttributesTag("id", attr.id);
