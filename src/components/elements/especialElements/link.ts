@@ -3,10 +3,8 @@ import { TypesLink } from "../../helpers/types/linkTypes";
 
 
 /**
- * Description placeholder
- * @date Th-10-2025
- * @author marcos tonfor
- * @description Clase que establece un link 
+ * @marcostonfor
+ * Clase que establece un link 
  * del head tal como un enlace a hojas de 
  * estilo css.
  *
@@ -45,7 +43,7 @@ export class Link extends CreateElement<"link"> {
         rels: string,
         hrefs: string,
         linkType?: TypesLink,
-        title?: string,
+        title?: string, 
     ) {
         if (linkType) {
             if (linkType.atom) {
