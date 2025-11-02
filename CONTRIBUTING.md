@@ -1,4 +1,4 @@
-# 🎌 ¡Gracias por tu interés en contribuir a [Nombre del Proyecto]! 🎌
+# 🎌 ¡Gracias por tu interés en contribuir con `SiteBlog-UI`! 🎌
 
 ¡Estamos encantados de que estés aquí! Toda contribución es valiosa, ya sea
 reportando un error, proponiendo una nueva idea, o escribiendo código.
