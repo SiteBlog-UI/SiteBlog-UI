@@ -8,15 +8,19 @@
     "start": "parcel public/index.html public/formAction.html public/probando.html --no-hmr --no-cache",
     "build": "webpack --config webpack.config.mjs",
     "generate-docs": "typedoc --entryPointStrategy expand --out ./docs ./src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "^24.7.0",
     "copy-webpack-plugin": "^13.0.1",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
     "parcel": "^2.16.0",
+    "ts-jest": "^29.4.5",
     "ts-loader": "^9.5.4",
     "typedoc": "^0.28.14",
     "typedoc-plugin-missing-exports": "^4.1.2",
